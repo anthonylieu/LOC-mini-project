@@ -1,3 +1,60 @@
 button{
     background-color: yellow;
 }
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form styles */
+  #search-form {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #search-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  #search-query {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #format-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Results styles */
+  #results {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+  }
+  
+  .card {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
