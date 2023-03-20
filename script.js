@@ -12,17 +12,20 @@ searchForm.addEventListener("submit", (event) => {
   const format = document.querySelector("#format-select").value;
 
   // Build URL for API request based on form values
-  let apiUrl = `https://www.loc.gov/${format}/?q=${searchQuery}&fo=json`;
+  let apiUrl = `https://www.loc.gov/${
+    format || "search"
+  }/?q=${searchQuery}&fo=json`;
+
 
   // Make API request using fetch()
   fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       // Clear any previous search results
       resultsSection.innerHTML = "";
 
       // Loop through each item in the response and create a card for it
-      data.results.forEach(item => {
+      data.results.forEach((item) => {
         const card = document.createElement("div");
         card.classList.add("card");
         const cardTitle = document.createElement("h3");
@@ -31,7 +34,7 @@ searchForm.addEventListener("submit", (event) => {
         resultsSection.appendChild(card);
       });
     })
-    .catch(error => {
+    .catch((error) => {
       console.log(error);
       alert("There was an error with your search. Please try again.");
     });
